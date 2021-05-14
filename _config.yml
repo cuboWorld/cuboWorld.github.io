@@ -13,15 +13,17 @@ show_hero: true
 menu:
   - title: Home
     url: /
-  - title: 만드는 것들
-    url: /about
-  - title: 관심 있는 것들
-    url: /contact
-  - title: Feed
-    url: /feed.xml
+  - title: What I Make
+    url: /category/Make
+  - title: Interested in
+    url: /category/Interest
+
+  - title: Tags
+    url: /tags
+ 
 email: yellocat88@gmail.com
 # See: https://disqus.com/
-disqus_username: disqus_username
+disqus_username: cuboworld-github-io
 # Contact Form Setting
 # See: https://formspree.io/
 formspree_form_id: formspree_form_id
@@ -38,7 +40,7 @@ formspree_form_id: formspree_form_id
 
 
 # Posts Settings
-show_time_bar: true
+show_time_bar: false
 show_modal_on_exit: false
 show_modal_on_finish_post: true
 two_columns_layout: true
@@ -105,4 +107,4 @@ exclude: [
 ]
 
 # Theme
-version: v3.1.1
+version: '' # v3.1.1
