@@ -1,3 +1,4 @@
-# robotstxt.org/
-
 User-agent: *
+Allow: /
+
+Sitemap: https://cuboworld.github.io/sitemap.xml
