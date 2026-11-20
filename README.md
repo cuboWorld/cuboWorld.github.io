@@ -3,10 +3,12 @@
 Official public website for cuboWorld and the Android game Squish Invaders.
 
 - Website: https://cuboworld.github.io/
-- Privacy policy (Korean and English): https://cuboworld.github.io/privacy/
-- Terms of Service (Korean and English): https://cuboworld.github.io/terms/
+- Privacy policy: https://cuboworld.github.io/privacy/
+- Terms of Service: https://cuboworld.github.io/terms/
 - Authorized ad sellers: https://cuboworld.github.io/app-ads.txt
 - Support: catinyello88@gmail.com
+
+The homepage, privacy policy and terms are available in Korean, English, Japanese, Simplified Chinese and Traditional Chinese. Link to a homepage language with `?lang=ja` or to the matching policy section with `/privacy/#ja` or `/terms/#ja`. Supported language codes are `ko`, `en`, `ja`, `zh-Hans` and `zh-Hant`.
 
 ## Hosting
 

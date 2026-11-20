@@ -11,3 +11,26 @@
 .terms-page .policy-language,.privacy-page .policy-language{font-size:1rem;line-height:1.95}
 .terms-page .policy-header>p:not(.eyebrow),.terms-page .policy-header nav,.terms-page .back-link,.terms-page .policy-header .eyebrow,.privacy-page .policy-header>p:not(.eyebrow),.privacy-page .policy-header nav,.privacy-page .back-link,.privacy-page .policy-header .eyebrow{font-size:.875rem}
 .policy-header nav{flex-wrap:wrap;row-gap:12px}
+
+.language-select {
+  max-width: 100%;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #bac7b6;
+  border-radius: 5px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: .875rem;
+  cursor: pointer;
+}
+.language-select:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+html:is(:lang(ja), :lang(zh)) .home-page { word-break: normal; }
+.home-page .site-header nav a { white-space: nowrap; }
+@media (max-width: 700px) {
+  .language-select { margin-left: auto; }
+  .home-page .site-header nav { gap: 8px 18px; }
+}
