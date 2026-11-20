@@ -8,5 +8,6 @@
 .site-header nav{flex-wrap:wrap;row-gap:12px;font-size:.875rem}
 .site-footer>div{flex-wrap:wrap;align-items:center;row-gap:12px;font-size:.875rem}
 .site-footer>div a{line-height:1.6}
-.terms-page .policy-language{font-size:1rem;line-height:1.95}
-.terms-page .policy-header>p:not(.eyebrow),.terms-page .policy-header nav,.terms-page .back-link,.terms-page .policy-header .eyebrow{font-size:.875rem}
+.terms-page .policy-language,.privacy-page .policy-language{font-size:1rem;line-height:1.95}
+.terms-page .policy-header>p:not(.eyebrow),.terms-page .policy-header nav,.terms-page .back-link,.terms-page .policy-header .eyebrow,.privacy-page .policy-header>p:not(.eyebrow),.privacy-page .policy-header nav,.privacy-page .back-link,.privacy-page .policy-header .eyebrow{font-size:.875rem}
+.policy-header nav{flex-wrap:wrap;row-gap:12px}

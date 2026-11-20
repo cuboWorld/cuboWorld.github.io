@@ -18,7 +18,7 @@ For local preview, run `python -m http.server 4173 --bind 127.0.0.1` in this dir
 
 - Update release status and add a verified Google Play link when the game launches.
 - Keep the privacy policy aligned with the shipped app, SDK settings, and Google Play Data safety answers. The policy currently covers the Android version.
-- Keep the Terms of Service aligned with the current free, rewarded-ad-supported game. Update them before introducing paid products, accounts, or cloud saves, and provide any notice or consent required for material changes.
+- Keep the Terms of Service aligned with the free, rewarded-ad-supported game, optional Google account linking, and Firebase cloud saves. Verify the shipped authentication, backup and deletion flows before updating these disclosures, and provide any notice or consent required for material changes.
 - The public contact address appears in the homepage and policy.
 - Keep `app-ads.txt` at the domain root and update it if the advertising account changes.
 - The website uses no third-party scripts, embedded services or visitor analytics. Images come from the Squish Invaders project.
