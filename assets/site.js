@@ -12,6 +12,7 @@
       button.setAttribute('aria-pressed', String(button.dataset.language === language));
     });
     document.querySelectorAll('[data-privacy-link]').forEach(link => { link.href = english ? '/privacy/#en' : '/privacy/#ko'; });
+    document.querySelectorAll('[data-terms-link]').forEach(link => { link.href = english ? '/terms/#en' : '/terms/#ko'; });
     if (updateUrl) {
       const url = new URL(window.location.href);
       if (english) url.searchParams.set('lang', 'en');
