@@ -18,7 +18,7 @@
   <p class="eyebrow">Squish Invaders · cuboWorld</p>
   <h1>개인정보처리방침 <span lang="en">/ Privacy Policy</span></h1>
   <p>시행일: 2026년 11월 21일 <span lang="en">· Effective: November 21, 2026</span></p>
-  <p>2026년 11월 21일 수정: 계정 연동, Firebase 클라우드 저장 및 삭제 방법 설명을 바로잡았습니다. <span lang="en">Updated November 21, 2026: corrected account-linking, Firebase cloud-save and deletion information.</span></p>
+  <p>2026년 11월 21일 수정: 계정 연동, Firebase 클라우드 저장 및 삭제 방법 설명을 바로잡고, 저장 및 삭제 완료 조건을 명확히 했습니다. <span lang="en">Updated November 21, 2026: corrected account-linking, Firebase cloud-save and deletion information, and clarified when saving and deletion are completed.</span></p>
   <nav aria-label="개인정보처리방침 언어 / Privacy policy language">
     <a href="#ko" lang="ko">한국어</a>
     <a href="#en" lang="en">English</a>
@@ -45,7 +45,7 @@
   <h3>2. 계정 연동과 게임 정보 저장</h3>
   <p>게임 진행 상황, 보유 재화와 아이템, 플레이 기록, 닉네임과 아바타, 기기에서 생성된 플레이어 식별자는 게임을 이어서 이용할 수 있도록 기기에 저장됩니다. 언어와 음량 등의 환경설정도 기기에 저장됩니다. 닉네임에는 실명이나 연락처 등 개인정보를 입력하지 않는 것이 좋습니다.</p>
   <p>Google 계정 연동을 선택하면 Firebase Authentication이 계정 인증과 관리를 처리합니다. 이 과정에서 Google 계정 식별 정보, Firebase 사용자 식별자(UID), 인증에 필요한 정보 및 로그인 서비스가 제공하는 이메일·프로필 정보 등이 처리될 수 있습니다. 인증 서비스는 보안과 부정 이용 방지를 위해 IP 주소 등 접속 정보도 처리할 수 있습니다. Google 계정의 비밀번호를 게임 개발자에게 직접 제공하는 방식은 아닙니다.</p>
-  <p>계정 연동 후에는 게임 진행 데이터가 해당 계정과 연결되어 Google의 Cloud Firestore에 저장됩니다. 저장 항목에는 플레이어 식별자, 닉네임·아바타, 재화·경험치·아이템·장비, 스테이지·도전·전투 및 보상 관련 기록 등이 포함됩니다. 저장 시각과 버전 정보, 저장한 기기를 구분하는 임의 식별자도 저장하며, 백업·복원과 저장 충돌 확인에 사용합니다. 백업을 위한 이전 저장본이 함께 보관될 수 있습니다.</p>
+  <p>계정 연동 후 클라우드 저장을 사용하면 게임 진행 데이터가 해당 계정과 연결되어 Google의 Cloud Firestore에 저장됩니다. 저장 항목에는 플레이어 식별자, 닉네임·아바타, 재화·경험치·아이템·장비, 스테이지·도전·전투 및 보상 관련 기록 등이 포함됩니다. 저장 시각과 버전 정보, 저장한 기기를 구분하는 임의 식별자도 저장하며, 백업·복원과 저장 충돌 확인에 사용합니다. 백업을 위한 이전 저장본이 함께 보관될 수 있습니다.</p>
   <p>계정 연동 후에는 수동 저장과 자동 백업을 사용할 수 있습니다. 클라우드 저장·불러오기에는 인터넷 연결과 같은 연동 계정에 대한 접근이 필요합니다. 전송 실패나 저장 시점 차이로 최신 진행 상황이 아직 백업되지 않았을 수 있으며, 클라우드에 저장되지 않은 진행 상황은 앱 삭제나 기기 변경·분실 등으로 잃을 수 있습니다. 일부 환경설정의 백업·복원은 기기 설정과 운영체제의 정책에 따라 달라질 수 있습니다. 자세한 정보 처리 방식은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호 안내</a>에서 확인할 수 있습니다.</p>
 
   <h3>3. Google AdMob 광고와 동의 선택</h3>
@@ -64,7 +64,7 @@
   <h3 id="delete-data">6. 계정·데이터 보관과 삭제</h3>
   <ul>
     <li><strong>기기 내 데이터:</strong> 게임 이용을 위해 기기에 보관됩니다. Android 설정에서 앱 저장 데이터를 지우거나 앱을 제거하면 해당 기기의 게임 데이터를 삭제할 수 있습니다. 이 작업이나 로그아웃만으로 Firebase 게임 계정과 클라우드 저장 데이터가 삭제되지는 않습니다. 삭제 전에는 백업되지 않은 진행 상황을 잃을 수 있다는 점을 확인하세요. 일부 환경설정의 백업·복원은 운영체제 설정에 따라 달라질 수 있습니다.</li>
-    <li><strong>Firebase 게임 계정과 클라우드 저장:</strong> 계정과 연결된 저장 데이터는 백업·복원 기능을 제공하는 동안 보관합니다. 게임의 <strong>모험 보관함 &gt; 계정 관리 &gt; 계정 삭제</strong>에서 본인 확인 후 Firebase 게임 계정과 해당 계정의 클라우드 저장본 및 이전 백업본을 삭제할 수 있습니다. 이 작업은 Google 계정 자체나 기기에 남아 있는 진행 데이터를 삭제하지 않습니다. 기기 데이터도 지우려면 위의 별도 절차를 이용하세요.</li>
+    <li><strong>Firebase 게임 계정과 클라우드 저장:</strong> 계정과 연결된 저장 데이터는 백업·복원 기능을 제공하는 동안 보관합니다. 게임의 <strong>모험 보관함 &gt; 계정 관리 &gt; 계정 삭제</strong>에서 본인 확인을 거쳐 삭제 절차가 정상적으로 완료되면 Firebase 게임 계정과 해당 계정의 현재 클라우드 저장본 및 이전 백업본이 삭제됩니다. 이 작업은 Google 계정 자체나 기기에 남아 있는 진행 데이터를 삭제하지 않습니다. 기기 데이터도 지우려면 위의 별도 절차를 이용하세요.</li>
     <li><strong>문의 기록:</strong> 문의 해결, 후속 지원 및 필요한 법적 의무 이행에 필요한 동안 보관하며, 더 이상 필요하지 않으면 삭제합니다. 삭제 요청은 문의처로 보내실 수 있습니다.</li>
     <li><strong>서비스 제공업체의 정보:</strong> Google과 Unity가 처리한 정보의 보관 및 삭제에는 각 서비스의 정책과 제공되는 처리 절차가 적용됩니다. 기기의 게임 데이터를 지우는 것만으로 이미 전송된 정보까지 삭제되지는 않습니다. <a href="https://policies.google.com/technologies/retention">Google 데이터 보관 안내</a> 및 <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity 진단 데이터 요청 안내</a>를 참고하거나 개발자에게 문의하세요.</li>
   </ul>
@@ -95,7 +95,7 @@
   <h3>2. Account linking and game saves</h3>
   <p>Progress, in-game currency and items, play records, nickname and avatar, and a locally generated player identifier are stored on your device so you can continue playing. Preferences such as language and audio levels are also stored locally. Avoid using your real name, contact details or other personal information as your nickname.</p>
   <p>If you choose to link a Google account, Firebase Authentication handles authentication and account management. It processes Google account identifiers, your Firebase user ID (UID), information needed for authentication and, where supplied by the sign-in service, email and profile information. The authentication service may also process connection information such as IP addresses for security and abuse prevention. You do not provide your Google account password directly to the game developer.</p>
-  <p>After linking, game progress is stored in Google's Cloud Firestore under the linked account. Saved information includes your player identifier, nickname and avatar, currency, experience, items and equipment, and stage, challenge, combat and reward-related records. Save timestamps, version information and a random identifier distinguishing the saving device are also stored to support backup, restoration and save-conflict handling. A previous save may be retained as a backup.</p>
+  <p>When you use cloud saving after linking an account, game progress is stored in Google's Cloud Firestore under that account. Saved information includes your player identifier, nickname and avatar, currency, experience, items and equipment, and stage, challenge, combat and reward-related records. Save timestamps, version information and a random identifier distinguishing the saving device are also stored to support backup, restoration and save-conflict handling. A previous save may be retained as a backup.</p>
   <p>After linking an account, you can use manual saves and automatic backups. Cloud saving and loading require an internet connection and access to the same linked account. Failed uploads or differences in save timing may mean your latest progress has not yet been backed up. Progress not saved to the cloud may be lost if you uninstall the app or change or lose your device. Backup or restoration of some preferences depends on your device settings and the operating system's policies. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> for further details.</p>
 
   <h3>3. Google AdMob advertising and choices</h3>
@@ -114,7 +114,7 @@
   <h3 id="delete-data-en">6. Account and data retention and deletion</h3>
   <ul>
     <li><strong>Local game data:</strong> Data remains on your device for gameplay. Clearing the app's storage in Android settings or uninstalling the app removes its local game data. These actions, or signing out, do not delete your Firebase game account or cloud saves. Consider the possible loss of progress that has not been backed up before deleting local data. Backup or restoration of some preferences may depend on operating-system settings.</li>
-    <li><strong>Firebase game account and cloud saves:</strong> Account-linked saves are retained to provide backup and restoration. In the game, open the cloud-save vault, then account management and account deletion (Korean menu: <strong>모험 보관함 &gt; 계정 관리 &gt; 계정 삭제</strong>). After identity verification, this deletes the Firebase game account and its current and previous cloud saves. It does not delete your Google account itself or progress still stored on your device. Use the separate steps above if you also want to erase local data.</li>
+    <li><strong>Firebase game account and cloud saves:</strong> Account-linked saves are retained to provide backup and restoration. In the game, open the cloud-save vault, then account management and account deletion (Korean menu: <strong>모험 보관함 &gt; 계정 관리 &gt; 계정 삭제</strong>). Once identity verification and the deletion process complete successfully, your Firebase game account and its current and previous cloud saves are deleted. It does not delete your Google account itself or progress still stored on your device. Use the separate steps above if you also want to erase local data.</li>
     <li><strong>Support correspondence:</strong> We retain messages for as long as needed to resolve the request, provide follow-up support and meet applicable legal obligations, then delete them when no longer needed. You can contact us to request deletion.</li>
     <li><strong>Service-provider information:</strong> Information processed by Google and Unity is subject to the relevant provider policies and available request procedures. Clearing local game data does not erase information already transmitted. See <a href="https://policies.google.com/technologies/retention">Google's retention explanation</a> and <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity's diagnostic data request guidance</a>, or contact us for assistance.</li>
   </ul>
@@ -138,7 +138,7 @@
 
 <section id="ja" lang="ja" class="policy-language" aria-labelledby="policy-ja-title">
   <h2 id="policy-ja-title">プライバシーポリシー</h2>
-  <p><time datetime="2026-11-21">2026年11月21日</time>施行。同日、アカウント連携、Firebase のクラウドセーブ、データの削除方法の説明を訂正しました。<a href="#delete-data-ja">アカウント・データの削除方法を見る</a></p>
+  <p><time datetime="2026-11-21">2026年11月21日</time>施行。同日、アカウント連携、Firebase のクラウドセーブ、データの削除方法の説明を訂正し、保存と削除が完了する条件を明確にしました。<a href="#delete-data-ja">アカウント・データの削除方法を見る</a></p>
 
   <h3>1. 適用範囲とお問い合わせ窓口</h3>
   <p>cuboWorld は Android ゲーム「<strong>ぷにっとディフェンス</strong>」（Squish Invaders）とその公式サイトを提供しています。本ポリシーは、プレイ、アカウント連携、クラウドセーブ、広告、診断、お問い合わせ、公式サイトの閲覧に伴う情報の取り扱いを説明します。個人情報に関するご質問や権利行使のご請求は <a href="mailto:catinyello88@gmail.com">catinyello88@gmail.com</a> までお寄せください。</p>
@@ -147,7 +147,7 @@
   <h3>2. アカウント連携とゲームデータの保存</h3>
   <p>続きから遊べるように、進行状況、所持通貨やアイテム、プレイ記録、ニックネーム、アバター、端末上で生成したプレイヤー識別子を端末に保存します。言語や音量などの設定も端末に保存します。ニックネームには、本名や連絡先などの個人情報を使用しないことをお勧めします。</p>
   <p>Google アカウントとの連携を選ぶと、Firebase Authentication が認証とアカウント管理を行います。この過程で、Google アカウントの識別情報、Firebase ユーザー ID（UID）、認証に必要な情報、ログインサービスから提供される場合にはメールアドレスやプロフィール情報を取り扱います。認証サービスは、安全の確保と不正利用防止のため IP アドレスなどの接続情報も取り扱う場合があります。Google アカウントのパスワードをゲーム開発者に直接提供する必要はありません。</p>
-  <p>連携後は、ゲームの進行データをそのアカウントにひも付けて Google の Cloud Firestore に保存します。対象には、プレイヤー識別子、ニックネーム、アバター、通貨、経験値、アイテム、装備、ステージ・チャレンジ・戦闘・報酬の記録などが含まれます。バックアップ、復元、保存内容の競合確認に使うため、保存時刻、バージョン情報、保存元の端末を区別するランダムな識別子も記録します。以前の保存データをバックアップとして保持する場合があります。</p>
+  <p>アカウント連携後にクラウドセーブを利用すると、ゲームの進行データをそのアカウントにひも付けて Google の Cloud Firestore に保存します。対象には、プレイヤー識別子、ニックネーム、アバター、通貨、経験値、アイテム、装備、ステージ・チャレンジ・戦闘・報酬の記録などが含まれます。バックアップ、復元、保存内容の競合確認に使うため、保存時刻、バージョン情報、保存元の端末を区別するランダムな識別子も記録します。以前の保存データをバックアップとして保持する場合があります。</p>
   <p>連携後は、手動保存と自動バックアップが利用できます。クラウドへの保存や読み込みには、インターネット接続と同じ連携アカウントへのアクセスが必要です。通信エラーや保存のタイミングによっては最新の進行状況がまだバックアップされていない場合があります。クラウドに保存されていない進行状況は、アプリのアンインストール、端末の変更・紛失などで失われることがあります。一部設定のバックアップや復元は、端末の設定と OS の方針によって異なります。詳細は <a href="https://firebase.google.com/support/privacy">Firebase のプライバシーに関する説明</a>をご覧ください。</p>
 
   <h3>3. Google AdMob の広告とプライバシー設定</h3>
@@ -166,7 +166,7 @@
   <h3 id="delete-data-ja">6. アカウント・データの保管と削除</h3>
   <ul>
     <li><strong>端末のゲームデータ。</strong> プレイに必要なデータは端末に保管されます。Android 設定でアプリのストレージを消去するか、アプリをアンインストールすると、その端末のゲームデータを削除できます。これらの操作やログアウトだけでは、Firebase のゲームアカウントとクラウドの保存データは削除されません。端末のデータを消去する前に、バックアップされていない進行状況が失われる可能性をご確認ください。一部の設定がバックアップ・復元されるかは OS の設定により異なります。</li>
-    <li><strong>Firebase のゲームアカウントとクラウドセーブ。</strong> アカウントにひも付いた保存データは、バックアップ・復元を提供するために保管します。ゲーム内の<strong>「冒険の保管箱」→「アカウント管理」→「アカウント削除」</strong>で本人確認を行うと、Firebase のゲームアカウント、そのアカウントの現在のクラウドセーブと以前のバックアップが削除されます。Google アカウント自体や端末に残っている進行状況は削除されません。端末のデータも消去する場合は上記の手順をご利用ください。</li>
+    <li><strong>Firebase のゲームアカウントとクラウドセーブ。</strong> アカウントにひも付いた保存データは、バックアップ・復元を提供するために保管します。ゲーム内の<strong>「冒険の保管箱」→「アカウント管理」→「アカウント削除」</strong>で本人確認と削除手続きが正常に完了すると、Firebase のゲームアカウント、そのアカウントの現在のクラウドセーブと以前のバックアップが削除されます。Google アカウント自体や端末に残っている進行状況は削除されません。端末のデータも消去する場合は上記の手順をご利用ください。</li>
     <li><strong>お問い合わせの記録。</strong> 問題の解決、継続対応、法的義務の履行に必要な期間保管し、不要になった時点で削除します。削除をご希望の場合は当方までお知らせください。</li>
     <li><strong>サービス提供者が保有する情報。</strong> Google や Unity が処理した情報の保管・削除には、各社のポリシーと手続きが適用されます。端末のデータを消去しても、送信済みの情報は削除されません。<a href="https://policies.google.com/technologies/retention">Google のデータ保管に関する説明</a>および<a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity の診断データに関する請求手続き</a>をご覧いただくか、当方までお問い合わせください。</li>
   </ul>
@@ -190,7 +190,7 @@
 
 <section id="zh-Hans" lang="zh-Hans" class="policy-language" aria-labelledby="policy-zh-Hans-title">
   <h2 id="policy-zh-Hans-title">隐私政策</h2>
-  <p>本政策自<time datetime="2026-11-21">2026年11月21日</time>起生效。同日，我们更正了有关账号关联、Firebase 云存档和数据删除方式的说明。<a href="#delete-data-zh-Hans">查看账号和数据删除方法</a></p>
+  <p>本政策自<time datetime="2026-11-21">2026年11月21日</time>起生效。同日，我们更正了有关账号关联、Firebase 云存档和数据删除方式的说明，并明确了保存和删除完成的条件。<a href="#delete-data-zh-Hans">查看账号和数据删除方法</a></p>
 
   <h3>1. 适用范围与联系方式</h3>
   <p>cuboWorld 提供 Android 游戏《<strong>萌虫防线</strong>》（Squish Invaders）及其官方网站。本政策说明我们如何处理与游玩、账号关联、云存档、广告、故障诊断、客服及网站访问有关的信息。如有隐私问题或希望行使相关权利，请联系 <a href="mailto:catinyello88@gmail.com">catinyello88@gmail.com</a>。</p>
@@ -199,7 +199,7 @@
   <h3>2. 账号关联与游戏存档</h3>
   <p>为便于您继续游玩，设备上会保存游戏进度、持有的货币和道具、游玩记录、昵称、头像，以及在设备上生成的玩家标识符。语言、音量等偏好设置也保存在设备上。建议不要在昵称中使用真实姓名、联系方式等个人信息。</p>
   <p>如果您选择关联 Google 账号，Firebase Authentication 将负责身份验证和账号管理。在此过程中，它会处理 Google 账号标识信息、Firebase 用户标识符（UID）、身份验证所需的信息，以及登录服务提供的电子邮箱和个人资料（如有）。为保障安全和防止滥用，身份验证服务还可能处理 IP 地址等连接信息。您无需直接向游戏开发者提供 Google 账号密码。</p>
-  <p>关联后，游戏进度会与账号关联，存储在 Google 的 Cloud Firestore 中。保存的信息包括玩家标识符、昵称、头像、货币、经验值、道具、装备，以及关卡、挑战、战斗和奖励记录等。为了备份、恢复和检查存档冲突，系统还会保存存档时间、版本信息和用于区分存档设备的随机标识符。较早的存档副本可能作为备份保留。</p>
+  <p>关联账号后使用云存档时，游戏进度会与该账号关联，存储在 Google 的 Cloud Firestore 中。保存的信息包括玩家标识符、昵称、头像、货币、经验值、道具、装备，以及关卡、挑战、战斗和奖励记录等。为了备份、恢复和检查存档冲突，系统还会保存存档时间、版本信息和用于区分存档设备的随机标识符。较早的存档副本可能作为备份保留。</p>
   <p>关联账号后，您可以手动存档并使用自动备份。保存或读取云存档需要联网，并且您必须能够访问同一关联账号。上传失败或保存时间的差异可能导致最新进度尚未备份。如果您卸载应用、更换或遗失设备，尚未保存到云端的进度可能会丢失。部分偏好设置的备份和恢复取决于设备设置及操作系统的政策。详情请参阅 <a href="https://firebase.google.com/support/privacy">Firebase 隐私说明</a>。</p>
 
   <h3>3. Google AdMob 广告与隐私设置</h3>
@@ -218,7 +218,7 @@
   <h3 id="delete-data-zh-Hans">6. 账号与数据的保留和删除</h3>
   <ul>
     <li><strong>设备上的游戏数据。</strong> 游戏数据保存在设备上以供游玩。在 Android 设置中清除应用的存储数据或卸载应用，即可删除该设备上的游戏数据。这些操作或退出登录本身都不会删除 Firebase 游戏账号和云存档。清除前请注意，尚未备份的进度可能丢失。部分偏好设置是否备份或恢复取决于操作系统设置。</li>
-    <li><strong>Firebase 游戏账号和云存档。</strong> 与账号关联的存档将保留，用于提供备份和恢复功能。在游戏内依次打开<strong>“冒险保管箱”→“账号管理”→“删除账号”</strong>，通过身份验证后，即可删除 Firebase 游戏账号、该账号当前的云存档和之前的备份。此操作不会删除 Google 账号本身或仍保存在设备上的进度。如果您还想清除本地数据，请另行执行上述设备数据删除步骤。</li>
+    <li><strong>Firebase 游戏账号和云存档。</strong> 与账号关联的存档将保留，用于提供备份和恢复功能。在游戏内依次打开<strong>“冒险保管箱”→“账号管理”→“删除账号”</strong>，身份验证和删除流程成功完成后，Firebase 游戏账号、该账号当前的云存档和之前的备份会被删除。此操作不会删除 Google 账号本身或仍保存在设备上的进度。如果您还想清除本地数据，请另行执行上述设备数据删除步骤。</li>
     <li><strong>客服往来记录。</strong> 我们会在解决问题、提供后续支持和履行法定义务所需的期限内保留往来信息，待不再需要时删除。您可以联系我们申请删除。</li>
     <li><strong>服务商处理的信息。</strong> Google 和 Unity 处理的信息适用各自的数据保留政策和删除请求流程。清除设备上的游戏数据不会清除已发送给服务商的信息。请参阅 <a href="https://policies.google.com/technologies/retention">Google 数据保留说明</a>和 <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity 诊断数据请求指南</a>，或联系我们获取帮助。</li>
   </ul>
@@ -242,7 +242,7 @@
 
 <section id="zh-Hant" lang="zh-Hant" class="policy-language" aria-labelledby="policy-zh-Hant-title">
   <h2 id="policy-zh-Hant-title">隱私權政策</h2>
-  <p>本政策自<time datetime="2026-11-21">2026年11月21日</time>起生效。同日，我們更正了有關帳號連結、Firebase 雲端存檔及資料刪除方式的說明。<a href="#delete-data-zh-Hant">查看帳號與資料刪除方式</a></p>
+  <p>本政策自<time datetime="2026-11-21">2026年11月21日</time>起生效。同日，我們更正了有關帳號連結、Firebase 雲端存檔及資料刪除方式的說明，並釐清儲存與刪除完成的條件。<a href="#delete-data-zh-Hant">查看帳號與資料刪除方式</a></p>
 
   <h3>1. 適用範圍與聯絡方式</h3>
   <p>cuboWorld 提供 Android 遊戲《<strong>萌蟲防線</strong>》（Squish Invaders）及其官方網站。本政策說明遊玩、帳號連結、雲端存檔、廣告、錯誤診斷、客服聯絡及造訪網站時的資訊處理方式。如有隱私權問題或希望行使相關權利，請來信 <a href="mailto:catinyello88@gmail.com">catinyello88@gmail.com</a>。</p>
@@ -251,7 +251,7 @@
   <h3>2. 帳號連結與遊戲存檔</h3>
   <p>為了讓您繼續遊玩，裝置上會儲存遊戲進度、持有的貨幣與道具、遊玩紀錄、暱稱、虛擬頭像，以及在裝置上產生的玩家識別碼。語言和音量等偏好設定也會存在裝置上。建議您避免在暱稱中使用真實姓名、聯絡方式或其他個人資料。</p>
   <p>若您選擇連結 Google 帳戶，Firebase Authentication 會負責身分驗證和帳號管理。過程中會處理 Google 帳戶識別資料、Firebase 使用者識別碼（UID）、驗證所需的資料，以及登入服務提供的電子郵件地址與個人檔案資料（如有）。為維護安全及防止濫用，驗證服務也可能處理 IP 位址等連線資訊。您無須直接向遊戲開發者提供 Google 帳戶密碼。</p>
-  <p>連結後，遊戲進度會與該帳號連結，儲存在 Google 的 Cloud Firestore。存檔包含玩家識別碼、暱稱、虛擬頭像、貨幣、經驗值、道具、裝備，以及關卡、挑戰、戰鬥和獎勵紀錄等。為了備份、還原與檢查存檔衝突，系統也會記錄存檔時間、版本資料，以及用來區分儲存裝置的隨機識別碼。較早的存檔副本可能會保留作為備份。</p>
+  <p>連結帳號後使用雲端存檔時，遊戲進度會與該帳號連結，儲存在 Google 的 Cloud Firestore。存檔包含玩家識別碼、暱稱、虛擬頭像、貨幣、經驗值、道具、裝備，以及關卡、挑戰、戰鬥和獎勵紀錄等。為了備份、還原與檢查存檔衝突，系統也會記錄存檔時間、版本資料，以及用來區分儲存裝置的隨機識別碼。較早的存檔副本可能會保留作為備份。</p>
   <p>連結帳號後，您可以手動存檔，也可以使用自動備份。儲存或載入雲端存檔需要網路連線，而且您必須能存取同一個已連結帳號。上傳失敗或儲存時間不同，可能使最新進度尚未備份。如果您解除安裝、更換或遺失裝置，尚未儲存到雲端的進度可能會遺失。部分偏好設定的備份與還原，視裝置設定及作業系統政策而定。詳情請參閱 <a href="https://firebase.google.com/support/privacy">Firebase 隱私權說明</a>。</p>
 
   <h3>3. Google AdMob 廣告與隱私權選項</h3>
@@ -270,7 +270,7 @@
   <h3 id="delete-data-zh-Hant">6. 帳號與資料的保留及刪除</h3>
   <ul>
     <li><strong>裝置上的遊戲資料。</strong> 遊戲資料會保存在裝置上供您遊玩。在 Android 設定中清除應用程式的儲存資料，或將應用程式解除安裝，即可刪除該裝置上的遊戲資料。這些操作或登出本身並不會刪除 Firebase 遊戲帳號及雲端存檔。清除前請注意，尚未備份的進度可能遺失。部分偏好設定能否備份或還原，視作業系統設定而定。</li>
-    <li><strong>Firebase 遊戲帳號及雲端存檔。</strong> 與帳號連結的存檔會保留，用以提供備份與還原功能。在遊戲內依序開啟<strong>「冒險保管箱」→「帳號管理」→「刪除帳號」</strong>，通過身分驗證後，即可刪除 Firebase 遊戲帳號、該帳號目前的雲端存檔及較早的備份。此操作不會刪除 Google 帳戶本身或仍在裝置上的進度。如果還希望清除裝置資料，請另行依照上述步驟操作。</li>
+    <li><strong>Firebase 遊戲帳號及雲端存檔。</strong> 與帳號連結的存檔會保留，用以提供備份與還原功能。在遊戲內依序開啟<strong>「冒險保管箱」→「帳號管理」→「刪除帳號」</strong>，身分驗證及刪除程序成功完成後，Firebase 遊戲帳號、該帳號目前的雲端存檔及較早的備份會被刪除。此操作不會刪除 Google 帳戶本身或仍在裝置上的進度。如果還希望清除裝置資料，請另行依照上述步驟操作。</li>
     <li><strong>客服往來紀錄。</strong> 我們會在解決問題、提供後續支援及履行法定義務所需的期間內保留郵件，並在不再需要時刪除。您可以聯絡我們申請刪除。</li>
     <li><strong>服務商處理的資訊。</strong> Google 和 Unity 處理的資訊適用各自的資料保留政策與刪除申請程序。清除裝置上的遊戲資料，不會清除已傳送給服務商的資訊。請參閱 <a href="https://policies.google.com/technologies/retention">Google 資料保留說明</a>及 <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity 診斷資料申請指南</a>，或聯絡我們尋求協助。</li>
   </ul>
