@@ -1,32 +1,47 @@
 # cuboWorld
 
-Official public website for cuboWorld and the Android game Squish Invaders.
+The cuboWorld personal brand website and games catalog. The homepage introduces
+the brand and links to each game's own website; it is not a single game's homepage.
+Only the existing game is listed. Add future games when real information is available.
 
-- Website: https://cuboworld.github.io/
-- Privacy policy: https://cuboworld.github.io/privacy/
-- Terms of Service: https://cuboworld.github.io/terms/
+- Brand: https://cuboworld.github.io/
+- Squish Invaders: https://cuboworld.github.io/squish-invaders/
+- Website privacy: https://cuboworld.github.io/#site-privacy
 - Authorized ad sellers: https://cuboworld.github.io/app-ads.txt
-- Support: catinyello88@gmail.com
+- Contact: catinyello88@gmail.com
 
-The homepage, privacy policy and terms are available in Korean, English, Japanese, Simplified Chinese and Traditional Chinese. Link to a homepage language with `?lang=ja` or to the matching policy section with `/privacy/#ja` or `/terms/#ja`. Supported language codes are `ko`, `en`, `ja`, `zh-Hans` and `zh-Hant`.
+## Languages and source
 
-## Hosting
+The brand homepage supports Korean, English, Japanese, Simplified Chinese and
+Traditional Chinese (ko, en, ja, zh-Hans, zh-Hant). Use ?lang=ja to link to a specific
+language. The selected language is passed to game links. Edit index.html,
+assets/brand.css and assets/brand.js for the brand homepage.
 
-Buildless HTML, CSS and JavaScript. GitHub Pages publishes `main` from the repository root. `.nojekyll` disables Jekyll processing. No dependency installation or build is required.
+The game's introduction and five-language policies are maintained separately in
+cuboWorld/squish-invaders. Its routes are /squish-invaders/,
+/squish-invaders/terms/ and /squish-invaders/privacy/.
+Do not present the game's terms as brand-wide terms. The game operator remains cuboWorld.
 
-For local preview, run `python -m http.server 4173 --bind 127.0.0.1` in this directory.
+## Hosting and compatibility
 
-## Maintenance
+Buildless HTML, CSS and JavaScript. GitHub Pages publishes main from the repository
+root, with .nojekyll. No installation or build is needed. Run
+python -m http.server 4173 --bind 127.0.0.1 for a brand-only local preview.
+Mount the separate game checkout at /squish-invaders/ to preview both sites together.
 
-- Update release status and add a verified Google Play link when the game launches.
-- Keep the privacy policy aligned with the shipped app, SDK settings, and Google Play Data safety answers. The policy currently covers the Android version.
-- Keep the Terms of Service aligned with the free, rewarded-ad-supported game, optional Google account linking, and Firebase cloud saves. Verify the shipped authentication, backup and deletion flows before updating these disclosures, and provide any notice or consent required for material changes.
-- The public contact address appears in the homepage and policy.
-- Keep `app-ads.txt` at the domain root and update it if the advertising account changes.
-- The website uses no third-party scripts, embedded services or visitor analytics. Images come from the Squish Invaders project.
+/privacy/ and /terms/ are legacy redirects to the game's new documents. They preserve
+query strings and fragments, including account deletion anchors. Keep these available
+for existing app and store links. JavaScript-disabled visitors can use the five-language
+links on each redirect page.
+
+Keep app-ads.txt at the hostname root even if the game's developer website URL contains
+/squish-invaders/. Keep root robots.txt and sitemaps aligned with the public routes.
+The website uses no third-party analytics or ad trackers.
 
 ## Previous site
 
-The Jekflix version is retained on `codex/backup-jekflix-20261116`, at commit `ca01beb7c312ece7efb65b0773228cf775fc4f1d`. The new site does not reuse Jekflix template code or assets.
+The Jekflix version is retained on codex/backup-jekflix-20261116, at commit
+ca01beb7c312ece7efb65b0773228cf775fc4f1d. Its template code and assets are not reused.
 
-Game art and branding belong to their respective rights holders. This repository does not grant a license to reuse them.
+Game artwork and branding belong to their respective rights holders. This repository
+does not grant a license to reuse them.

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://cuboworld.github.io/sitemap.xml
+Sitemap: https://cuboworld.github.io/squish-invaders/sitemap.xml
