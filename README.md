@@ -4,6 +4,10 @@ The cuboWorld personal brand website and games catalog. The homepage introduces
 the brand and links to each game's own website; it is not a single game's homepage.
 Only the existing game is listed. Add future games when real information is available.
 
+Visitor-facing copy should introduce the games naturally. "Brand" and "personal
+brand" describe the internal site direction, not public identity labels; do not
+display those labels or their translations in page copy, metadata or link labels.
+
 - Brand: https://cuboworld.github.io/
 - Squish Invaders: https://cuboworld.github.io/squish-invaders/
 - Website privacy: https://cuboworld.github.io/#site-privacy
